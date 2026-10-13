@@ -3,7 +3,11 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
-\IfFontExistsTF{Noto Sans}{\setmainfont{Noto Sans}}{\setmainfont{DejaVu Sans}}
+\IfFontExistsTF{Noto Sans}{\setmainfont{Noto Sans}}{%
+  \IfFontExistsTF{DejaVu Sans}{\setmainfont{DejaVu Sans}}{%
+    \setmainfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]%
+  }%
+}
 \usepackage[a4paper,left=1.65cm,right=1.65cm,top=1.40cm,bottom=1.45cm]{geometry}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{graphicx}
@@ -21,7 +25,7 @@
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
 \urlstyle{same}
-\AtBeginDocument{\fontsize{10.25}{15}\selectfont\RaggedRight\color{ink}}
+\AtBeginDocument{\fontsize{10.25}{14.8}\selectfont\RaggedRight\color{ink}}
 \setlist[itemize]{leftmargin=1.28em,topsep=5pt,itemsep=6pt,parsep=0pt,partopsep=0pt}
 
 \newif\ifcvphoto
@@ -112,9 +116,8 @@ GPA: 3.2/4.0
 
 
 \cvsection{KỸ NĂNG}
-
-\textbf{Học hỏi và thích nghi:} Chủ động tiếp thu kiến thức mới, nhanh chóng thích nghi với công việc.\par\vspace{4pt}
-
-\textbf{Quản lý thời gian:} Sắp xếp công việc hợp lý, chú trọng độ chính xác và tiến độ.
-
+\begin{itemize}
+  \item Chủ động học hỏi, tiếp thu kiến thức mới; nhanh chóng thích nghi với quy trình, môi trường làm việc.
+  \item Có tinh thần trách nhiệm, cẩn thận trong công việc; biết sắp xếp thứ tự ưu tiên và đảm bảo tiến độ.
+\end{itemize}
 \end{document}
