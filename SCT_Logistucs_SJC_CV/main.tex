@@ -1,5 +1,5 @@
 % CV Customer Service Forwarding -- bien dich bang XeLaTeX.
-% Dat anh portrait_CV.jpg cung thu muc voi file .tex.
+% Anh dung chung cua Minh Tam: assets/minh-tam/portrait_CV.png.
 \documentclass[10pt,a4paper]{article}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
@@ -11,6 +11,9 @@
 \usepackage[a4paper,left=1.65cm,right=1.65cm,top=1.40cm,bottom=1.45cm]{geometry}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{graphicx}
+% Ho tro bien dich tu thu muc CV hoac tu goc repo.
+\newcommand{\cvphotopath}{../assets/minh-tam/portrait_CV.png}
+\IfFileExists{assets/minh-tam/portrait_CV.png}{\renewcommand{\cvphotopath}{assets/minh-tam/portrait_CV.png}}{}
 \usepackage{tikz}
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -59,14 +62,14 @@
     \path[use as bounding box] (-\radius,-\radius) rectangle (\radius,\radius);
     \clip (0,0) circle (\radius cm);
     \node[inner sep=0] at (\photoX,\photoY) {%
-      \includegraphics[width=\photoZoom]{portrait_CV.png}%
+      \includegraphics[width=\photoZoom]{\cvphotopath}%
     };
   \end{tikzpicture}%
 }
 
 \begin{document}
 \ifcvphoto
-  \IfFileExists{portrait_CV.png}{%
+  \IfFileExists{\cvphotopath}{%
     \noindent\begin{minipage}[t]{0.76\linewidth}
       \vspace{0pt}\cvheading
     \end{minipage}\hfill%
