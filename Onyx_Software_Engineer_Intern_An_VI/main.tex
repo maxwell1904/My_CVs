@@ -1,0 +1,83 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX\usepackage[utf8]{inputenc}\fi
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[Path=fonts/,BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[Path=fonts/,BoldFont=lmsans10-bold.otf]
+\usepackage{microtype}
+\usepackage[a4paper,left=1.4cm,right=1.4cm,top=1.05cm,bottom=1.05cm]{geometry}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Nguyễn Phúc An - Thực tập sinh Kỹ sư Phần mềm},pdfauthor={Nguyễn Phúc An}}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\ifdefined\pdfgentounicode\input{glyphtounicode}\pdfgentounicode=1\fi
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\urlstyle{same}
+\definecolor{ink}{HTML}{202A31}
+\definecolor{accent}{HTML}{345C69}
+\definecolor{muted}{HTML}{53616B}
+\definecolor{rulecolor}{HTML}{BDC9CC}
+\setlist[itemize]{leftmargin=1.3em,labelsep=0.5em,itemsep=1.5pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\cvmeta}[1]{{\color{muted}\fontsize{9.25pt}{11.5pt}\selectfont #1}}
+\newcommand{\cvsection}[1]{\par\vspace{8pt}{\color{accent}\sffamily\fontsize{9.5pt}{12pt}\selectfont\bfseries\MakeUppercase{#1}}\par\nopagebreak[4]\vspace{2.5pt}{\color{rulecolor}\hrule height 0.35pt}\nopagebreak[4]\vspace{5pt}}
+\newcommand{\cvrole}[4]{\textbf{#1}\hfill\cvmeta{#2}\\[1pt]\textit{#3}\hfill\cvmeta{#4}\par\nopagebreak[4]}
+\newcommand{\cvproject}[2]{\textbf{#1}\par\nopagebreak[4]\cvmeta{#2}\par\nopagebreak[4]}
+\begin{document}
+\color{ink}\fontsize{10.25pt}{12.5pt}\selectfont\raggedright
+\hyphenpenalty=10000\exhyphenpenalty=10000
+{\fontsize{20pt}{24pt}\selectfont\bfseries NGUYỄN PHÚC AN}\par\vspace{4pt}
+{\color{accent}\sffamily\fontsize{12pt}{15pt}\selectfont\bfseries Kỹ sư phần mềm\enspace\textbar\enspace Thực tập sinh}\par\vspace{5pt}
+{\color{muted}\fontsize{9.5pt}{12pt}\selectfont
+Cái Răng, Cần Thơ \enspace\textbullet\enspace 0383718494 \enspace\textbullet\enspace \href{mailto:it.phucan@gmail.com}{it.phucan@gmail.com}\\[1pt]
+\href{https://github.com/maxwell1904}{github.com/maxwell1904}\enspace\textbullet\enspace\href{https://www.linkedin.com/in/maxwellng}{linkedin.com/in/maxwellng}\par}
+
+\cvsection{Giới thiệu}
+Có nền tảng JavaScript/Node.js, kinh nghiệm Frontend tại MobiFone và Automation QC (OJT) tại FPT Software. Từng tham gia phát triển giao diện React, tích hợp REST API, phân tích lỗi và kiểm tra bản sửa. Định hướng phát triển web với React và Node.js, kết hợp kinh nghiệm lập trình và kiểm thử.
+
+\cvsection{Kỹ năng}
+\textbf{Frontend:} JavaScript (ES6+), TypeScript, HTML/CSS, React.js; component, props/state, form và xử lý dữ liệu bất đồng bộ.\\[2pt]
+\textbf{Backend \& API:} Node.js, Express.js; REST API, HTTP/JSON, input validation và error handling; NestJS trong dự án.\\[2pt]
+\textbf{Database:} Có kinh nghiệm dùng MongoDB và PostgreSQL/Supabase trong các dự án.\\[2pt]
+\textbf{Testing \& Debugging:} Playwright, DevTools, Postman; phân tích test fail, tái hiện bug và kiểm tra lại sau khi sửa.\\[2pt]
+\textbf{Công cụ:} Git/GitHub, Unix CLI, Docker cơ bản (image, container); sử dụng AI hỗ trợ tìm hiểu kỹ thuật và phát triển, có kiểm tra kết quả.\\[2pt]
+\textbf{Tiếng Anh:} Giao tiếp tự tin, trao đổi kỹ thuật và đọc hiểu tài liệu chuyên môn.
+
+\cvsection{Kinh nghiệm}
+\cvrole{Công ty Dịch vụ MobiFone Khu vực 9}{Cần Thơ}{Frontend Developer Intern}{12/2024 -- 06/2025}
+\begin{itemize}
+\item Tham gia phát triển giao diện React/JavaScript cho các form và màn hình hiển thị dữ liệu trên web portal nội bộ.
+\item Phối hợp với team backend để tích hợp API, kiểm tra dữ liệu hiển thị và debug lỗi tích hợp.
+\item Sử dụng DevTools và Postman để kiểm tra request/response, tái hiện bug và kiểm tra lại sau khi sửa.
+\end{itemize}
+\vspace{4pt}
+\cvrole{FPT Software}{Cần Thơ}{Automation QC (OJT)}{08/2026 -- Hiện tại}
+\begin{itemize}
+\item Chỉnh sửa và bảo trì script TypeScript/Playwright theo test case do team Manual Test chuẩn bị.
+\item Phân tích test fail bằng cách kiểm tra logic script và đối chiếu expected/actual với hành vi ứng dụng.
+\item Cập nhật locator, assertion và wait condition để xử lý lỗi tương tác và timing; quản lý thay đổi bằng Git.
+\end{itemize}
+
+\cvsection{Dự án}
+\cvproject{Lego Mini E-Commerce -- Website thương mại điện tử}{React.js, Node.js, Express.js, MongoDB}
+\begin{itemize}
+\item Website sử dụng MERN với các chức năng đăng nhập, quản lý giỏ hàng và đặt hàng.
+\item REST API có input validation và error handling, tích hợp với các luồng chức năng trên giao diện React.
+\end{itemize}
+\vspace{2pt}
+\cvproject{InterDev -- Nền tảng môi giới Freelancer}{React.js, NestJS, PostgreSQL/Supabase}
+\begin{itemize}
+\item Nền tảng kết nối freelancer, khách hàng và bên môi giới, với các luồng quản lý dự án theo vai trò, thanh toán và hoàn tiền.
+\item Điều phối AI agent qua prompt và điều chỉnh yêu cầu trong quá trình triển khai các chức năng frontend/backend.
+\end{itemize}
+
+\cvsection{Học vấn}
+\textbf{Đại học FPT Cần Thơ}\hfill\cvmeta{2022 -- 2026}\\[1pt]
+Chuyên ngành Kỹ thuật phần mềm \hfill\cvmeta{Cần Thơ, Việt Nam}
+
+\cvsection{Chứng chỉ}
+\href{https://coursera.org/share/b403c6e320ff1390528e387490c2bf41}{\textbf{Software Development Lifecycle}}\hfill\cvmeta{University of Minnesota, 2023}\\[2pt]
+\href{https://coursera.org/share/3f377786b9323b84a1c6e1f50f19a856}{\textbf{User Experience Research and Design}}\hfill\cvmeta{University of Michigan, 2023}
+\end{document}

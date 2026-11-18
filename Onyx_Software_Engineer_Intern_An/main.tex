@@ -1,0 +1,83 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX\usepackage[utf8]{inputenc}\fi
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,left=1.4cm,right=1.4cm,top=1.05cm,bottom=1.05cm]{geometry}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Nguyen Phuc An - Software Engineer Intern},pdfauthor={Nguyen Phuc An}}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\ifdefined\pdfgentounicode\input{glyphtounicode}\pdfgentounicode=1\fi
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\urlstyle{same}
+\definecolor{ink}{HTML}{202A31}
+\definecolor{accent}{HTML}{345C69}
+\definecolor{muted}{HTML}{53616B}
+\definecolor{rulecolor}{HTML}{BDC9CC}
+\setlist[itemize]{leftmargin=1.3em,labelsep=0.5em,itemsep=1.5pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\cvmeta}[1]{{\color{muted}\fontsize{9.25pt}{11.5pt}\selectfont #1}}
+\newcommand{\cvsection}[1]{\par\vspace{8pt}{\color{accent}\sffamily\fontsize{9.5pt}{12pt}\selectfont\bfseries\MakeUppercase{#1}}\par\nopagebreak[4]\vspace{2.5pt}{\color{rulecolor}\hrule height 0.35pt}\nopagebreak[4]\vspace{5pt}}
+\newcommand{\cvrole}[4]{\textbf{#1}\hfill\cvmeta{#2}\\[1pt]\textit{#3}\hfill\cvmeta{#4}\par\nopagebreak[4]}
+\newcommand{\cvproject}[2]{\textbf{#1}\par\nopagebreak[4]\cvmeta{#2}\par\nopagebreak[4]}
+\begin{document}
+\color{ink}\fontsize{10.25pt}{12.5pt}\selectfont\raggedright
+\hyphenpenalty=10000\exhyphenpenalty=10000
+{\fontsize{20pt}{24pt}\selectfont\bfseries NGUYEN PHUC AN}\par\vspace{4pt}
+{\color{accent}\sffamily\fontsize{12pt}{15pt}\selectfont\bfseries Software Engineer\enspace\textbar\enspace Intern}\par\vspace{5pt}
+{\color{muted}\fontsize{9.5pt}{12pt}\selectfont
+Cai Rang, Can Tho \enspace\textbullet\enspace 0383718494 \enspace\textbullet\enspace \href{mailto:it.phucan@gmail.com}{it.phucan@gmail.com}\\[1pt]
+\href{https://github.com/maxwell1904}{github.com/maxwell1904}\enspace\textbullet\enspace\href{https://www.linkedin.com/in/maxwellng}{linkedin.com/in/maxwellng}\par}
+
+\cvsection{Profile}
+JavaScript/Node.js background with frontend experience at MobiFone and Automation QC OJT experience at FPT Software. Contributed to React interfaces, REST API integration, failure investigation and fix verification. Focused on web development with React and Node.js, combining development and testing experience.
+
+\cvsection{Skills}
+\textbf{Frontend:} JavaScript (ES6+), TypeScript, HTML/CSS, React.js; components, props/state, forms and asynchronous data handling.\\[2pt]
+\textbf{Backend \& APIs:} Node.js, Express.js; REST APIs, HTTP/JSON, input validation and error handling; NestJS in projects.\\[2pt]
+\textbf{Databases:} Experience using MongoDB and PostgreSQL/Supabase in projects.\\[2pt]
+\textbf{Testing \& Debugging:} Playwright, browser DevTools, Postman; test-failure investigation, issue reproduction and fix verification.\\[2pt]
+\textbf{Tools:} Git/GitHub, Unix CLI, Docker basics (images and containers); AI-assisted technical research and development, with output review.\\[2pt]
+\textbf{English:} Confident spoken communication; comfortable discussing technical topics and reading technical documentation.
+
+\cvsection{Experience}
+\cvrole{MobiFone Digital Services Company Region 9}{Can Tho}{Frontend Developer Intern}{Dec 2024 -- Jun 2025}
+\begin{itemize}
+\item Contributed to React/JavaScript interfaces for forms and data display in an internal web portal.
+\item Worked with backend team members on API integration, checking displayed data and troubleshooting frontend--backend issues.
+\item Inspected HTTP requests and responses with browser DevTools and Postman; reproduced issues and re-tested fixes.
+\end{itemize}
+\vspace{4pt}
+\cvrole{FPT Software}{Can Tho}{Automation QC (OJT)}{Aug 2026 -- Present}
+\begin{itemize}
+\item Maintained existing TypeScript/Playwright scripts against test cases prepared by the manual testing team.
+\item Investigated failures by comparing script logic, expected results and observed application behavior.
+\item Updated locators, assertions and wait conditions for interaction/timing issues; managed script changes with Git.
+\end{itemize}
+
+\cvsection{Projects}
+\cvproject{Lego Mini E-Commerce -- E-Commerce Website}{React.js, Node.js, Express.js, MongoDB}
+\begin{itemize}
+\item MERN website with user login, cart management and order-placement workflows.
+\item REST APIs with input validation and error handling, integrated with React application flows.
+\end{itemize}
+\vspace{2pt}
+\cvproject{InterDev -- Freelancer Brokerage Platform}{React.js, NestJS, PostgreSQL/Supabase}
+\begin{itemize}
+\item Platform connecting freelancers, clients and brokers, with role-based project workflows, payments and refunds.
+\item Coordinated AI agents through prompts and requirement refinement during frontend/backend implementation.
+\end{itemize}
+
+\cvsection{Education}
+\textbf{FPT University Can Tho}\hfill\cvmeta{2022 -- 2026}\\[1pt]
+Software Engineering \hfill\cvmeta{Can Tho, Vietnam}
+
+\cvsection{Certifications}
+\href{https://coursera.org/share/b403c6e320ff1390528e387490c2bf41}{\textbf{Software Development Lifecycle}}\hfill\cvmeta{University of Minnesota, 2023}\\[2pt]
+\href{https://coursera.org/share/3f377786b9323b84a1c6e1f50f19a856}{\textbf{User Experience Research and Design}}\hfill\cvmeta{University of Michigan, 2023}
+\end{document}
