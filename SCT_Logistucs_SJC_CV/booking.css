@@ -1,0 +1,472 @@
+:root {
+    color-scheme: light;
+    --blue: #343fc6;
+    --ink: #242831;
+    --muted: #555a69;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #e9edf3;
+    color: var(--ink);
+    font: 14px/1.55 'Noto Sans', Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tools {
+    max-inline-size: 900px;
+    margin: 18px auto;
+    padding-inline: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.tools label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tools button {
+    margin-inline-start: auto;
+    border: 0;
+    padding: 10px 17px;
+    background: var(--blue);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tools :focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+.resume {
+    max-inline-size: 900px;
+    margin: 0 auto 36px;
+    padding: 24px;
+    background: #f4fafb;
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1fr);
+    grid-template-areas: 'photo identity' 'photo intro' 'education experience' 'skills experience';
+    grid-template-rows: auto auto auto 1fr;
+    gap: 22px;
+}
+
+.resume>* {
+    min-inline-size: 0;
+}
+
+.identity {
+    grid-area: identity;
+    padding-block: 4px 0;
+    text-align: right;
+}
+
+h1 {
+    margin: 0 0 12px;
+    color: var(--blue);
+    font-family: 'Noto Sans Condensed', 'Arial Narrow', 'Noto Sans', sans-serif;
+    font-stretch: condensed;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+.role {
+    display: inline-block;
+    color: var(--blue);
+    background: linear-gradient(90deg, transparent, #ececf9 35%, #ececf9 85%, transparent);
+    padding: 4px 12px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.photo {
+    grid-area: photo;
+    margin: -24px 0 0 -24px;
+    display: flex;
+    align-items: end;
+    position: relative;
+    isolation: isolate;
+    min-block-size: 320px;
+    align-self: stretch;
+}
+
+.photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--blue);
+    border-start-end-radius: 100% 85%;
+    z-index: -1;
+}
+
+.photo img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    max-block-size: 365px;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.panel {
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #d5d7df;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #29234515;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.qualifications {
+    display: contents;
+}
+
+.education {
+    grid-area: education;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 16px;
+    color: #293a8b;
+    font-size: 12px;
+    line-height: 1.45;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, white, #f0f0fa 45%, #f6f6fb);
+    border-radius: 6px;
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 29px;
+    block-size: 29px;
+    border-radius: 4px;
+    background: var(--blue);
+    color: white;
+}
+
+svg {
+    display: block;
+    inline-size: 19px;
+    block-size: 19px;
+    flex-shrink: 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+p {
+    margin: 0 0 9px;
+}
+
+address {
+    margin-block-start: 20px;
+    font-size: 12px;
+    font-style: normal;
+    display: grid;
+    gap: 12px;
+}
+
+address a,
+address span {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    overflow-wrap: anywhere;
+}
+
+address svg {
+    color: var(--blue);
+    inline-size: 22px;
+    block-size: 22px;
+}
+
+.company {
+    margin-block: 7px 0;
+}
+
+.date {
+    font-size: 11px;
+    color: var(--muted);
+    margin-block: 3px 12px;
+}
+
+ul {
+    padding-inline-start: 17px;
+    margin: 12px 0 0;
+}
+
+li {
+    padding-inline-start: 2px;
+    margin-block-end: 8px;
+}
+
+.job+.job {
+    margin-block-start: 20px;
+    padding-block-start: 16px;
+    border-block-start: 1px solid #e3e5ed;
+}
+
+.gpa {
+    margin-block: 13px;
+}
+
+dl {
+    margin: 18px 0 0;
+}
+
+dl div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-block-end: 10px;
+}
+
+dt {
+    font-weight: 600;
+}
+
+dd {
+    margin: 0;
+}
+
+.single-column .resume {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'identity' 'photo' 'intro' 'experience' 'education' 'skills';
+}
+
+.single-column .photo {
+    margin: 0;
+    min-block-size: 0;
+    block-size: 180px;
+    justify-content: center;
+}
+
+.single-column .photo::before {
+    display: none;
+}
+
+.single-column .photo img {
+    inline-size: auto;
+    block-size: 180px;
+}
+
+.single-column .identity {
+    text-align: left;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.tools button:hover {
+    background: #2631a6;
+}
+
+.tools button:active {
+    background: #202987;
+}
+
+::selection {
+    color: white;
+    background: var(--blue);
+}
+
+dd,
+.date {
+    font-variant-numeric: tabular-nums;
+}
+
+@media screen and (max-width:650px) {
+    .tools {
+        gap: 12px;
+        font-size: 12px;
+        padding-inline: 16px;
+    }
+
+    .tools button {
+        margin-inline-start: 0;
+    }
+
+    .resume {
+        padding: 18px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'identity' 'photo' 'intro' 'experience' 'education' 'skills';
+        gap: 18px;
+        margin-block-end: 0;
+    }
+
+    .identity {
+        text-align: center;
+        padding-block: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .photo {
+        margin: 0;
+        min-block-size: 0;
+        block-size: 300px;
+        justify-content: center;
+    }
+
+    .photo img {
+        inline-size: auto;
+        max-inline-size: 100%;
+        block-size: 300px;
+    }
+
+    .photo::before {
+        border-start-end-radius: 90% 90%;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 7mm;
+}
+
+@media print {
+    body {
+        background: #f4fafb;
+        font-size: 8.8pt;
+        line-height: 1.4;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .tools {
+        display: none;
+    }
+
+    .resume {
+        margin: 0;
+        max-inline-size: none;
+        padding: 4mm;
+        gap: 4mm;
+    }
+
+    h1 {
+        font-size: 25pt;
+        letter-spacing: -1.3px;
+    }
+
+    .role {
+        font-size: 8pt;
+    }
+
+    .photo {
+        margin: -4mm 0 0 -4mm;
+        min-block-size: 65mm;
+    }
+
+    .photo img {
+        max-block-size: 92mm;
+    }
+
+    .panel {
+        padding: 4mm;
+        border-radius: 3mm;
+    }
+
+    h2 {
+        font-size: 8pt;
+        margin-block-end: 3mm;
+        gap: 2.5mm;
+    }
+
+    .icon {
+        flex-basis: 6mm;
+        block-size: 6mm;
+    }
+
+    svg {
+        inline-size: 4mm;
+        block-size: 4mm;
+    }
+
+    h3 {
+        font-size: 9.5pt;
+    }
+
+    .date {
+        font-size: 8pt;
+    }
+
+    address {
+        font-size: 8pt;
+        margin-block-start: 3mm;
+        gap: 2mm;
+    }
+
+    address svg {
+        inline-size: 4.5mm;
+        block-size: 4.5mm;
+    }
+
+    p {
+        margin-block-end: 6px;
+    }
+
+    li {
+        margin-block-end: 1.6mm;
+    }
+
+    .job+.job {
+        margin-block-start: 3mm;
+        padding-block-start: 2mm;
+    }
+
+    .panel,
+    .job {
+        break-inside: avoid;
+    }
+
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+}
