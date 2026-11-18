@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {filterProducts,updateQuantity,calculateTotal} from './core.mjs';
+const products=[{id:1,name:'Lego City',price:100},{id:2,name:'Book',price:20}];
+test('search is case-insensitive and trims query',()=>assert.deepEqual(filterProducts(products,' CITY ').map(p=>p.id),[1]));
+test('empty query keeps all products',()=>assert.equal(filterProducts(products,' ').length,2));
+test('unknown query is empty',()=>assert.deepEqual(filterProducts(products,'xyz'),[]));
+test('quantity update preserves original input',()=>{const items=[{...products[0],quantity:1}];const updated=updateQuantity(items,1,2);assert.equal(items[0].quantity,1);assert.equal(updated[0].quantity,2);});
+test('unknown id does not alter values',()=>{const items=[{...products[0],quantity:1}];assert.deepEqual(updateQuantity(items,99,2),items);});
+test('invalid quantities rejected',()=>{for(const q of [0,11,1.5,-1])assert.throws(()=>updateQuantity([],1,q),RangeError);});
+test('total for empty cart',()=>assert.equal(calculateTotal([]),0));
+test('total reflects prices and quantities',()=>assert.equal(calculateTotal([{price:100,quantity:2},{price:20,quantity:3}]),260));
